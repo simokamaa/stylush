@@ -1,0 +1,18 @@
+{% for daily_work in daily_works %}
+    <h2>Daily Work</h2>
+    <p>Employee ID: {{ daily_work.employee_ID }}</p>
+    <p>Total Amount: {{ daily_work.total_amount }}</p>
+    <p>Job Type: {{ daily_work.job_type }}</p>
+    <p>Commission Rate: {{ daily_work.commision_rate }}</p>
+    <p>Date: {{ daily_work.date }}</p>
+
+    <h3>Calculated Income:</h3>
+    <p>Employee Income: {{ daily_work.employee_income }}</p>
+    <p>Weekly Employee Income: {{ daily_work.employee_income|mul:7 }}</p>
+    <p>Monthly Employee Income: {{ daily_work.employee_income|mul:30 }}</p>
+
+    <h3>Calculated Total Amount:</h3>
+    <p>Total Amount: {{ daily_work.calculate_total_amount }}</p>
+
+    <hr>
+{% endfor %}

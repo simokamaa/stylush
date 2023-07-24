@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="">Settings</h1>
+        </div>
+        <div class="col">
+           <button class="btn btn-info m-2 p-2 " href="{% url 'profile' %}">home</button>
+        </div>
+    </div>
+
+  <div class="row">
+    <div class="col">
+      <h6 class="rann">settings for your system</h6>
+    </div>
+    <div class="col">
+      <a href="{% url 'company_account' %}"><button class="btn btn-primary">Company financial account</button></a>
+    </div>
+
+    <div class="col">
+      <form method="POST" action="{% url 'profileDelete' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+      <button type="submit" value="submit" class="btn btn-danger">Delete Profile Accounts</button>
+      </form>
+    </div>
+  </div>
+    <style>
+      .rann{
+        text-transform: uppercase;
+        color:darkblue;
+        margin-bottom: 2px;
+        text-decoration: underline;
+      }
+    </style>
+  <div class="table-responsive">
+    <form method="post" action="">
+      {% csrf_token %}
+      {% bootstrap_form form  %}
+      <button type="submit" class="btn btn-success" >Save</button>
+  </form>
+  </div>
+</div>
+
+<div>
