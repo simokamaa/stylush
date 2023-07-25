@@ -22,4 +22,6 @@ Django_require_login 1.1.2
 
 fpdf
 
+TinyMce 6.2.1
+
 
