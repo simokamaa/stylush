@@ -17,3 +17,9 @@ Reportlab 4.0.0
 Bootstrap 5.3.0
 
 Pillow 9.5.0
+
+Django_require_login 1.1.2
+
+fpdf
+
+
