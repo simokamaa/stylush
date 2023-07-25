@@ -50,7 +50,7 @@ context = {
    
 def addEmployee(request):
     if request.method == 'POST':
-        form = EmployeesForm(request.POST)
+        form = EmployeesForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('/home')

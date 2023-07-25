@@ -131,8 +131,8 @@ STATICFILES_DIRS = [
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 #STATIC_ROOT = 'static'
 
-MEDIA_URL = "/first/upload/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'first/upload')
+MEDIA_URL = "/upload/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
