@@ -1,3 +1,12 @@
 # stylush
 Payroll system for stylush
 project link : http://stylushpayroll.pythonanywhere.com/
+
+.The Project is developed using Django Python
+.________________________________________________________________________________________
+_________________REQUIREMENTS____________________________________________________________
+Python 3.11.1
+Django 4.2.1
+Reportlab 4.0.0
+Bootstrap 5.3.0
+Pillow 9.5.0
