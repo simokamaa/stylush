@@ -5,6 +5,7 @@ project link : http://stylushpayroll.pythonanywhere.com/
 .The Project is developed using Django Python
 .________________________________________________________________________________________
 _________________Dependiences____________________________________________________________
+
 Dependencies:
 
 Python 3.11.1
