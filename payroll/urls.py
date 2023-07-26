@@ -24,7 +24,7 @@ urlpatterns = [
     path('',   views.login),
     path('admin/', admin.site.urls),
     path('home/', include('first.urls')),
-    path('', include('pwa.urls')),
+    path('', include('django_pwa.urls')),
 ]
 
 # Serving media files during development
