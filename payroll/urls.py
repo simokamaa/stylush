@@ -23,8 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('',   views.login),
     path('admin/', admin.site.urls),
-    path('home/', include('first.urls')),
-    path('', include('django_pwa.urls')),
+    path('home/', include('first.urls'))
 ]
 
 # Serving media files during development

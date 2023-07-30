@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     "bootstrap5",
     'first',
     'pwa',
-    'django_pwa',
     #'accounts',
 ]
 MIDDLEWARE = [
