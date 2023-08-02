@@ -52,7 +52,7 @@ class Employees(models.Model):
     next_of_kin_first_name = models.CharField(max_length=255, blank=True, null=True)
     next_of_kin_middle_name =models.CharField(max_length=255, blank=True, null=True)
     next_of_kin_last_name = models.CharField(max_length=255, blank=True, null=True)
-    next_of_kin_national_id = models.IntegerField(blank=True, blank=True, null=True)
+    next_of_kin_national_id = models.IntegerField(blank=True, null=True)
     next_of_kin_relationship = models.CharField(max_length=255, blank=True)
     next_of_kin_phone_number = models.IntegerField(blank=True, null=True)
     next_of_kin_email = models.EmailField(blank=True, null=True, required=False)
