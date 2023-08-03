@@ -40,7 +40,7 @@ class Employees(models.Model):
     middle_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     username = models.CharField(max_length=255)
-    Employement_id = models.IntegerField()
+    Employement_id = models.IntegerField(primary_key=True)
     Email = models.EmailField()
     phone_number = models.IntegerField()
     kra_pin = models.FloatField(blank=True, null=True)
@@ -112,10 +112,10 @@ class PayrollSummary(models.Model):
     employeeId= models.ForeignKey("Employees", on_delete=models.CASCADE)
 
 class AdvanceSalary(models.Model):
-    employee_name = models.ForeignKey("Employees", on_delete=models.CASCADE)
+    employee_name = models.ForeignKey("Employees", to_field="Employement_id", on_delete=models.CASCADE)
     amount = models.FloatField()
-    month = models.DateTimeField(blank=True,auto_now_add=True)
-    reason = models.TextField(blank=True)
+    month = models.DateTimeField(auto_now_add=True)
+    reason = models.TextField(blank=True, null=True)
 
 class overtime(models.Model):
     employee_id =  models.ForeignKey("Employees", on_delete=models.CASCADE)
