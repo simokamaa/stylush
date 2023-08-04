@@ -1,5 +1,7 @@
 # stylush
-Payroll system for stylush
+![image](https://github.com/simokamaa/stylush/assets/88234407/47aa3100-c005-4326-9ce9-089f1025f244)
+
+Payroll system for stylush college
 project link : http://stylushpayroll.pythonanywhere.com/
 
 .The Project is developed using Django Python
