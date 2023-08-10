@@ -26,4 +26,4 @@ fpdf
 
 TinyMce 6.2.1
 
->This system is PWA based,,pwa Android and Desktope application
+>This system is PWA based,,pwa Android and Desktope application.
