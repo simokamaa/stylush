@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "bootstrap5",
     'first',
-    'djangoeasypdf',
     'pwa',
     #'accounts',
 ]
@@ -125,15 +124,14 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
     os.path.join(BASE_DIR, 'static'),
 ]
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static/js', 'serviceworker.js')
 #STATIC_ROOT = 'static'
 
-MEDIA_URL = "/first/upload/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'first/upload')
+MEDIA_URL = "/upload/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -162,7 +160,7 @@ VERIFICATION_CODE_VALIDITY_IN_MINUTES = 1 # range of [1, 60] only
 # RATELIMIT_KEY_FUNCTION = 'ratelimit.utils.get_rate_limit_key'
 # RATELIMIT_RATE = '10/m'
 
-#pwa
+
 PWA_APP_NAME = 'My App'
 PWA_APP_DESCRIPTION = "My app description"
 PWA_APP_THEME_COLOR = '#0A0302'
@@ -192,3 +190,17 @@ PWA_APP_SPLASH_SCREEN = [
 ]
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
+PWA_APP_SHORTCUTS = [
+    {
+        'name': 'Shortcut',
+        'url': '/target',
+        'description': 'Shortcut to a page in my application'
+    }
+]
+PWA_APP_SCREENSHOTS = [
+    {
+      'src': '/static/images/icons/splash-750x1334.png',
+      'sizes': '750x1334',
+      "type": "image/png"
+    }
+]
