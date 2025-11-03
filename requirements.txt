@@ -1,0 +1,6 @@
+django
+django-bootstrap5
+django-bootstrap-v5
+fpdf2
+reportlab
+xhtml2pdf

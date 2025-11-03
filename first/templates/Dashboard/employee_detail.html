@@ -446,7 +446,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="{% static 'img/profile-img.jpg'   %}" class="img-fluid rounded-circle" alt="Profile Image" style="width: 150px; height: 150px;">
+                    <img src="{{ employee.image.url }}" class="img-fluid rounded-circle" alt="Profile Image" style="width: 150px; height: 150px;">
                   </div>
                   <h3 class="card-title text-center mt-3">{{ employee.first_name }} {{ employee.last_name }}</h3>
                   <table class="table">

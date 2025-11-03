@@ -488,8 +488,8 @@
                       <td>{{ employee.phone_number }}</td>
                       <td>{{ employee.kra_pin }}</td>
                       <td><img style="max-width:100px; max-height:100px;" src= "{{ employee.image.url}}" /></td>
-                      <td><img src="{{ employee.front_id_image.url }}"/></td> 
-                      <td><img  src="{{ employee.back_id_image.url }}"/></td>
+                      <td><img style="max-width:100px; max-height:100px;" src="{{ employee.front_id_image.url }}"/></td> 
+                      <td><img style="max-width:100px; max-height:100px;" src="{{ employee.back_id_image.url }}"/></td>
                       <td>
                             <a href="{% url 'employee_detail' employee.pk %}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i>View</a>
                             <a href="{% url 'employee_update' employee.pk %}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i>Edit</a>

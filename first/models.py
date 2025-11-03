@@ -40,33 +40,33 @@ class Employees(models.Model):
     middle_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     username = models.CharField(max_length=255)
-    Employement_id = models.IntegerField()
+    Employement_id = models.IntegerField(primary_key=True)
     Email = models.EmailField()
     phone_number = models.IntegerField()
-    kra_pin = models.IntegerField()
+    kra_pin = models.FloatField(blank=True, null=True)
     image = models.ImageField(upload_to='upload/', default = 'a.png')
     front_id_image = models.ImageField(upload_to='upload/',  default = 'a.png')
     back_id_image = models.ImageField(upload_to='upload/',  default = 'a.png')
-    salary_type=models.CharField(max_length=255,blank=True, choices=SALARY_TYPE_CHOICES)
+    salary_type=models.CharField(max_length=255,blank=True, null=True, choices=SALARY_TYPE_CHOICES)
     department = models.ForeignKey("Department", on_delete=models.CASCADE)
-    next_of_kin_first_name = models.CharField(max_length=255, blank=True)
-    next_of_kin_middle_name =models.CharField(max_length=255, blank=True)
-    next_of_kin_last_name = models.CharField(max_length=255, blank=True)
+    next_of_kin_first_name = models.CharField(max_length=255, blank=True, null=True)
+    next_of_kin_middle_name =models.CharField(max_length=255, blank=True, null=True)
+    next_of_kin_last_name = models.CharField(max_length=255, blank=True, null=True)
     next_of_kin_national_id = models.IntegerField(blank=True, null=True)
-    next_of_kin_relationship = models.CharField(max_length=255, blank=True)
-    next_of_kin_phone_number = models.IntegerField(blank=True)
+    next_of_kin_relationship = models.CharField(max_length=255, blank=True, null=True)
+    next_of_kin_phone_number = models.IntegerField(blank=True, null=True)
     next_of_kin_email = models.EmailField(blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    total_income = models.IntegerField(default=0, blank=True)
+    total_income = models.IntegerField(default=0, blank=True, null=True)
    
    
     def __str__(self):
         return self.first_name
     
 class employee_initializer(models.Model):
-    consolidated_employee_income = models.IntegerField(default=0, blank=True)
-    all_amount_income = models.IntegerField(default=0, blank=True)
-    company_amount_income = models.IntegerField(default=0, blank=True)
+    consolidated_employee_income = models.IntegerField(default=0, blank=True, null=True)
+    all_amount_income = models.IntegerField(default=0, blank=True, null=True)
+    company_amount_income = models.IntegerField(default=0, blank=True, null=True)
     
 class Commision_saraly(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -112,10 +112,10 @@ class PayrollSummary(models.Model):
     employeeId= models.ForeignKey("Employees", on_delete=models.CASCADE)
 
 class AdvanceSalary(models.Model):
-    employee_name = models.ForeignKey("Employees", on_delete=models.CASCADE)
+    employee_name = models.ForeignKey("Employees", to_field="Employement_id", on_delete=models.CASCADE)
     amount = models.FloatField()
-    month = models.DateTimeField(blank=True,auto_now_add=True)
-    reason = models.TextField(blank=True)
+    month = models.DateTimeField(auto_now_add=True)
+    reason = models.TextField(blank=True, null=True)
 
 class overtime(models.Model):
     employee_id =  models.ForeignKey("Employees", on_delete=models.CASCADE)
